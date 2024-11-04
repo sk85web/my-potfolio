@@ -39,6 +39,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Sergey Kovalev — Frontend Developer</title>
+        <meta
+          name="description"
+          content="Portfolio of Sergey Kovalev, a frontend developer from Minsk. Explore my projects, skills, and contact information for hiring."
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+      </head>
       <body className={`${jetbrainsMono.variable} antialiased`}>
         <Header />
         <PageTransition>{children}</PageTransition>

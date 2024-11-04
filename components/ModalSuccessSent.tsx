@@ -8,9 +8,9 @@ const ModalSuccessSent = ({
 }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-2">
-      <div className="relative max-w-md w-full p-6 bg-[#27272c] rounded-[10px] text-white shadow-lg">
+      <div className="relative max-w-md w-full p-10 bg-[#27272c] rounded-[10px] text-white shadow-lg">
         <IoMdClose
-          className="text-3xl text-accent absolute top-2 right-2 hover:text-accent-hover transition-colors"
+          className="text-3xl text-accent absolute top-2 right-2 hover:text-accent-hover transition-colors cursor-pointer"
           onClick={() => resetSend(false)}
           aria-label="Close"
         />
