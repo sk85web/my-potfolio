@@ -1,7 +1,12 @@
 'use client';
 
 import { FaHtml5, FaCss3, FaJs, FaReact } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiRedux } from 'react-icons/si';
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiRedux,
+  SiTypescript,
+} from 'react-icons/si';
 
 import { Tabs, TabsContent, TabsTrigger, TabsList } from '@/components/ui/tabs';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -11,11 +16,12 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import MotionSection from '@/components/MotionSection';
 
 const about = {
   title: 'About me',
   description:
-    'Explore my professional experience, technical skills, and educational background in web development. Skilled in HTML, CSS, JavaScript, React, Redux, Next.js, and Tailwind CSS.',
+    'Explore my professional journey in frontend development, where I have built strong skills in HTML, CSS, JavaScript, React, Redux, Next.js, Tailwind CSS. My focus is on creating optimized, responsive, and user-friendly web applications.',
   info: [
     { fieldName: 'Name', fieldValue: 'Sergey Kovalev' },
     { fieldName: 'Phone', fieldValue: '+375(29) 706 81 80' },
@@ -30,7 +36,7 @@ const experience = {
   icon: '',
   title: 'My experience - education',
   description:
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo laudantium blanditiis alias dolorum explicabo harum aliquid quia esse laborum numquam.',
+    'Continually advancing my frontend development skills with a focus on React, Next.js, TypeScript. Proficient in modern tools and design patterns, creating maintainable code and enhancing user experience in every project.',
   items: [
     {
       company: 'T1 Group',
@@ -57,7 +63,8 @@ const experience = {
 
 const skills = {
   title: 'My skills',
-  description: 'Lorem',
+  description:
+    'Experienced in developing responsive, interactive web interfaces using HTML, CSS, JavaScript, TypeScript. Skilled in modern frameworks and libraries, including React, Next.js, Redux, and Tailwind CSS, with an emphasis on optimized, scalable solutions.',
   skillsList: [
     {
       icon: <FaHtml5 />,
@@ -70,6 +77,10 @@ const skills = {
     {
       icon: <FaJs />,
       name: 'javascript',
+    },
+    {
+      icon: <SiTypescript />,
+      name: 'typescript',
     },
     {
       icon: <FaReact />,
@@ -92,7 +103,7 @@ const skills = {
 
 const Resume = () => {
   return (
-    <section className="pt-8">
+    <MotionSection>
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
@@ -192,7 +203,7 @@ const Resume = () => {
           </div>
         </Tabs>
       </div>
-    </section>
+    </MotionSection>
   );
 };
 

@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import ModalSuccessSent from '@/components/ModalSuccessSent';
+import MotionSection from '@/components/MotionSection';
 
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
@@ -86,7 +87,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="pt-8">
+    <MotionSection>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:h-[54%] order-2 xl:order-none">
@@ -190,7 +191,7 @@ const Contact = () => {
         </div>
       </div>
       {sent && <ModalSuccessSent resetSend={setIsSent} />}
-    </section>
+    </MotionSection>
   );
 };
 

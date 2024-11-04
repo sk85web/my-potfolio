@@ -1,5 +1,6 @@
 'use client';
 
+// import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,6 +19,7 @@ import {
 
 import SwiperBtns from '@/components/SwiperBtns';
 import { projects } from '@/constants/constants';
+import MotionSection from '@/components/MotionSection';
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -28,7 +30,7 @@ const Work = () => {
   };
 
   return (
-    <section>
+    <MotionSection>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px] pt-8">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
@@ -61,7 +63,7 @@ const Work = () => {
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>deploy project</p>
+                        <p>Deploy project</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -73,7 +75,7 @@ const Work = () => {
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>github project</p>
+                        <p>Github project</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -92,11 +94,10 @@ const Work = () => {
                 return (
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-20"></div>
-                      <div>
+                      <div className="relative w-full h-full">
                         <Image
-                          src={project.image}
-                          alt={project.title}
+                          src={work.image}
+                          alt={work.title}
                           fill
                           className="object-cover"
                         />
@@ -113,7 +114,7 @@ const Work = () => {
           </div>
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 };
 
