@@ -10,8 +10,9 @@ import { Button } from '@/components/ui/button';
 import ModalSuccessSent from '@/components/ModalSuccessSent';
 import MotionSection from '@/components/MotionSection';
 
-const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
+// const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+// const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
+// const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
 
 const info = [
   {
@@ -67,8 +68,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        serviceId,
-        templateId,
+        'service_b6jcg79',
+        'contact_form',
         {
           contact_number: contact_number,
           user_name: `${formData.firstName} ${formData.lastName}`,
