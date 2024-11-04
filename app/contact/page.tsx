@@ -80,6 +80,7 @@ const Contact = () => {
       )
       .then(() => {
         setIsSent(true);
+        console.log(serviceId, templateId, userId);
       })
       .catch((error) => {
         console.error('Email send error:', error);
