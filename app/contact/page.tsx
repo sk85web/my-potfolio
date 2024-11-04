@@ -115,12 +115,12 @@ const Contact = () => {
                   onChange={handleChange}
                   aria-required="true"
                 />
-                <label htmlFor="lastname" className="sr-only">
+                <label htmlFor="lastName" className="sr-only">
                   Last name
                 </label>
                 <Input
-                  id="lastname"
-                  name="lastname"
+                  id="lastName"
+                  name="lastName"
                   type="text"
                   placeholder="Last Name"
                   onChange={handleChange}
