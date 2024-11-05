@@ -1,0 +1,17 @@
+{
+  "Home": {
+    "greeting": "Hello, I'm",
+    "name": "Sergey",
+    "lastName": "Kovalev",
+    "position": "Frontend Developer",
+    "description": "I'm a frontend developer with 1+ years of hands-on experience in building responsive, interactive applications",
+    "downloadCV": "Download CV"
+  },
+  "Contact": {
+    "together": "Let's work together",
+    "fillForm": "Please fill out the form below.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email"
+  }
+}
