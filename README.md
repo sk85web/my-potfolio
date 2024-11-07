@@ -1,5 +1,5 @@
 This is my [portfolio](https://my-potfolio-ruddy.vercel.app/) created me on Next.js.
-![image](https://github.com/user-attachments/assets/7b589b56-2f37-4d8e-b4f3-bbd5ebd1d743)
+![image](https://github.com/user-attachments/assets/15654aad-e45e-484d-ac63-b81ad1fffb60)
 
 ## Getting Started
 
