@@ -17,6 +17,7 @@ const Photo = () => {
             src="/assets/photo.jpg"
             alt="my photo"
             fill
+            sizes="(min-width: 1200px) 450px, 298px"
             priority
             quality={100}
             className="object-contain rounded-[50%]"

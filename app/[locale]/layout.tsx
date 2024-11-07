@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 
 import Header from '@/components/Header';
 import PageTransition from '@/components/PageTransition';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -32,13 +34,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <title>Sergey Kovalev — Frontend Developer</title>
         <meta
@@ -64,8 +70,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${jetbrainsMono.variable} antialiased`}>
-        <Header />
-        <PageTransition>{children}</PageTransition>
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <PageTransition>{children}</PageTransition>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

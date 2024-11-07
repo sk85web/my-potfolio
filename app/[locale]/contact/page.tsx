@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import ModalSuccessSent from '@/components/ModalSuccessSent';
 import MotionSection from '@/components/MotionSection';
+import { useTranslations } from 'next-intl';
 
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
@@ -86,6 +87,8 @@ const Contact = () => {
       });
   };
 
+  const t = useTranslations('Contact');
+
   return (
     <MotionSection>
       <div className="container mx-auto">
@@ -95,45 +98,45 @@ const Contact = () => {
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
               onSubmit={sendEmail}
             >
-              <h1 className="text-accent text-4xl">Let&apos;s work together</h1>
+              <h1 className="text-accent text-4xl">{t('together')}</h1>
               {error ? (
                 <p className="text-red-400" role="alert">
                   {error}
                 </p>
               ) : (
-                <p className="text-white/60">Please fill out the form below.</p>
+                <p className="text-white/60">{t('fillForm')}</p>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <label htmlFor="firstName" className="sr-only">
-                  First Name
+                  {t('firstName')}
                 </label>
                 <Input
                   id="firstName"
                   name="firstName"
                   type="text"
-                  placeholder="First Name"
+                  placeholder={t('firstName')}
                   onChange={handleChange}
                   aria-required="true"
                 />
                 <label htmlFor="lastName" className="sr-only">
-                  Last name
+                  {t('lastName')}
                 </label>
                 <Input
                   id="lastName"
                   name="lastName"
                   type="text"
-                  placeholder="Last Name"
+                  placeholder={t('lastName')}
                   onChange={handleChange}
                   aria-required="true"
                 />
                 <label htmlFor="email" className="sr-only">
-                  Email
+                  {t('email')}
                 </label>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Email"
+                  placeholder={t('email')}
                   onChange={handleChange}
                 />
                 <label htmlFor="phone" className="sr-only">
@@ -143,29 +146,29 @@ const Contact = () => {
                   id="phone"
                   name="phone"
                   type="phone"
-                  placeholder="Phone number"
+                  placeholder={t('phone')}
                   onChange={handleChange}
                   aria-required="true"
                 />
               </div>
               <label htmlFor="message" className="sr-only">
-                Message
+                {t('message')}
               </label>
               <Textarea
                 id="message"
                 name="message"
                 className="h-[200px]"
-                placeholder="Type your message here..."
+                placeholder={t('typeMessage')}
                 onChange={handleChange}
                 aria-required="true"
                 aria-describedby="messageHelp"
               ></Textarea>
               <p id="messageHelp" className="sr-only">
-                Describe your message here.
+                {t('describeMessage')}
               </p>
 
               <Button className="max-w-40" type="submit">
-                Send message
+                {t('send')}
               </Button>
             </form>
           </div>

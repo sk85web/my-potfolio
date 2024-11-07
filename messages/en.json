@@ -1,0 +1,51 @@
+{
+  "Header": {
+    "hireMe": "Hire me"
+  },
+
+  "Home": {
+    "greeting": "Hello, I'm",
+    "name": "Sergey",
+    "lastName": "Kovalev",
+    "position": "Frontend Developer",
+    "description": "I'm a frontend developer with 1+ years of hands-on experience in building responsive, interactive applications",
+    "downloadCV": "Download CV"
+  },
+
+  "Resume": {
+    "expirienceTitle": "My experience - education",
+    "expirienceTub": "Expirience",
+    "expirienceDescription": "Continually advancing my frontend development skills with a focus on React, Next.js, TypeScript. Proficient in modern tools and design patterns, creating maintainable code and enhancing user experience in every project.",
+    "graduate": "Graduate",
+
+    "skillsTitle": "My skills",
+    "skillsTub": "Skills",
+    "skillsDescription": "Experienced in developing responsive, interactive web interfaces using HTML, CSS, JavaScript, TypeScript. Skilled in modern frameworks and libraries, including React, Next.js, Redux, and Tailwind CSS, with an emphasis on optimized, scalable solutions.",
+
+    "aboutTub": "About me"
+  },
+
+  "Contact": {
+    "together": "Let's work together",
+    "fillForm": "Please fill out the form below.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "message": "Message",
+    "typeMessage": "Type your message here...",
+    "describeMessage": "Describe your message here.",
+    "send": "Send message",
+    "sendMessage": "Your message has been sent",
+    "sendStatus": "successfully",
+    "sendRequest": " I’ll answer you as soon as possible. Thank you for reaching out"
+  },
+
+  "LocaleSwitcher": {
+    "label": "Select lang",
+    "locale": {
+      "en": "English",
+      "ru": "Russian"
+    }
+  }
+}

@@ -1,6 +1,5 @@
 'use client';
 
-// import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,10 +17,17 @@ import {
 } from '@/components/ui/tooltip';
 
 import SwiperBtns from '@/components/SwiperBtns';
-import { projects } from '@/constants/constants';
+import { projects as ProjectsData } from '@/constants/constants';
 import MotionSection from '@/components/MotionSection';
+import { useParams } from 'next/navigation';
+import { ParamsType, ProjectProps } from '@/types';
 
 const Work = () => {
+  const params: ParamsType = useParams<{ locale: 'en' | 'ru' }>();
+  const locale = params.locale as 'en' | 'ru';
+
+  const projects: ProjectProps[] = ProjectsData[locale];
+
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper: SwiperType) => {
@@ -99,6 +105,7 @@ const Work = () => {
                           src={work.image}
                           alt={work.title}
                           fill
+                          sizes="50vw"
                           className="object-cover"
                         />
                       </div>
