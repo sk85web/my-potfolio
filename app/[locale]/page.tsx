@@ -1,14 +1,19 @@
+'use client';
+
 import { FiDownload } from 'react-icons/fi';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import Socials from '@/components/Socials';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
+import { ParamsType } from '@/types';
 
 const Home = () => {
   const t = useTranslations('Home');
+  const params: ParamsType = useParams();
 
   return (
     <main>
@@ -53,7 +58,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Stats />
+      <Stats currentLocale={params.locale} />
     </main>
   );
 };

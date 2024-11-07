@@ -2,26 +2,32 @@
 
 import CountUp from 'react-countup';
 
-const stats = [
-  {
-    number: 12,
-    title: 'Months of expirience',
-  },
-  {
-    number: 8,
-    title: 'Projects completed',
-  },
-  {
-    number: 7,
-    title: 'Technolgies learned',
-  },
-  {
-    number: 200,
-    title: 'Code commits',
-  },
-];
+const getLocaleStats = (locale: string) => {
+  const stats = [
+    {
+      number: 15,
+      title: locale === 'en' ? 'Months of experience' : 'Месяцев опыта',
+    },
+    {
+      number: 10,
+      title: locale === 'en' ? 'Projects completed' : 'Выполненных проектов',
+    },
+    {
+      number: 7,
+      title: locale === 'en' ? 'Technolgies learned' : 'Изученных технологий',
+    },
+    {
+      number: 200,
+      title: locale === 'en' ? 'Code commits' : 'Коммитов',
+    },
+  ];
 
-const Stats = () => {
+  return stats;
+};
+
+const Stats = ({ currentLocale }: { currentLocale: string }) => {
+  const stats = getLocaleStats(currentLocale);
+
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">

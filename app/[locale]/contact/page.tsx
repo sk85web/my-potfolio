@@ -114,7 +114,7 @@ const Contact = () => {
                   id="firstName"
                   name="firstName"
                   type="text"
-                  placeholder="First Name"
+                  placeholder={t('firstName')}
                   onChange={handleChange}
                   aria-required="true"
                 />
@@ -125,7 +125,7 @@ const Contact = () => {
                   id="lastName"
                   name="lastName"
                   type="text"
-                  placeholder="Last Name"
+                  placeholder={t('lastName')}
                   onChange={handleChange}
                   aria-required="true"
                 />
@@ -136,7 +136,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Email"
+                  placeholder={t('email')}
                   onChange={handleChange}
                 />
                 <label htmlFor="phone" className="sr-only">
@@ -146,29 +146,29 @@ const Contact = () => {
                   id="phone"
                   name="phone"
                   type="phone"
-                  placeholder="Phone number"
+                  placeholder={t('phone')}
                   onChange={handleChange}
                   aria-required="true"
                 />
               </div>
               <label htmlFor="message" className="sr-only">
-                Message
+                {t('message')}
               </label>
               <Textarea
                 id="message"
                 name="message"
                 className="h-[200px]"
-                placeholder="Type your message here..."
+                placeholder={t('typeMessage')}
                 onChange={handleChange}
                 aria-required="true"
                 aria-describedby="messageHelp"
               ></Textarea>
               <p id="messageHelp" className="sr-only">
-                Describe your message here.
+                {t('describeMessage')}
               </p>
 
               <Button className="max-w-40" type="submit">
-                Send message
+                {t('send')}
               </Button>
             </form>
           </div>

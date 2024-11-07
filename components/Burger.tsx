@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import {
   Sheet,
   SheetContent,
@@ -11,6 +11,7 @@ import {
 } from './ui/sheet';
 import { CiMenuFries } from 'react-icons/ci';
 import { links } from '@/constants/constants';
+import LocaleSwitcher from './LocaleSwitcher';
 
 const Burger = () => {
   const pathName = usePathname();
@@ -22,6 +23,7 @@ const Burger = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col justify-center items-center gap-8 ">
         <SheetTitle className="hidden">Menu</SheetTitle>
+        <LocaleSwitcher />
         <SheetDescription className="hidden">Description</SheetDescription>
         {links.map((link, index) => {
           return (
